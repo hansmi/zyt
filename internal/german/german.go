@@ -21,6 +21,7 @@ var germanUmlautReplacer = strings.NewReplacer(
 )
 
 func prepareMonth(m zytdata.MonthInfo) zytdata.MonthInfo {
+	m.ExtraNames = append(m.ExtraNames, m.Name)
 	m.ExtraAbbr = append(m.ExtraAbbr, m.Abbr)
 
 	for _, i := range []struct {

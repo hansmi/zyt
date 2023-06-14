@@ -47,6 +47,12 @@ func TestGerman(t *testing.T) {
 				Value:  "Mo., 1.4.2020 nachm.",
 				Want:   time.Date(2020, time.April, 1, 12, 0, 0, 0, time.UTC),
 			},
+			{
+				Name:   "March without umlaut",
+				Layout: "2. January 2006",
+				Value:  "12. Marz 2000",
+				Want:   time.Date(2000, time.March, 12, 0, 0, 0, 0, time.UTC),
+			},
 		},
 		Format: []zyttesting.FormatTest{
 			{
