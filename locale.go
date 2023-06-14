@@ -188,7 +188,7 @@ func (l *Locale) ParseInLocation(layout, value string, loc *time.Location) (time
 
 // Format returns a textual representation of the time value formatted
 // according to the layout defined by the argument. Wraps
-// [time.Time.ParseInLocation].
+// [time.Time.Format].
 //
 // When the layout contains a numeric form of the day and the month name, the
 // genitive form of the month name is used if the locale has one.
