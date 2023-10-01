@@ -42,8 +42,14 @@ func (r *Registry) Best(tag language.Tag) (*Locale, language.Confidence) {
 	}
 
 	if r.tags == nil {
-		slices.SortStableFunc(r.items, func(a, b *registeredLocale) bool {
-			return a.priority < b.priority
+		slices.SortStableFunc(r.items, func(a, b *registeredLocale) int {
+			if a.priority < b.priority {
+				return -1
+			} else if a.priority > b.priority {
+				return +1
+			}
+
+			return 0
 		})
 
 		r.tags = make([]language.Tag, len(r.items))

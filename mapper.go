@@ -43,12 +43,14 @@ func (b mapperBuilder) build() *mapper {
 	}
 
 	// Sort longest entries first
-	slices.SortFunc(m.entries, func(a, b mapperEntry) bool {
-		if len(a.old) == len(b.old) {
-			return a.old < b.old
+	slices.SortFunc(m.entries, func(a, b mapperEntry) int {
+		if len(a.old) > len(b.old) {
+			return -1
+		} else if len(a.old) < len(b.old) {
+			return +1
 		}
 
-		return len(a.old) > len(b.old)
+		return strings.Compare(a.old, b.old)
 	})
 
 	return m
