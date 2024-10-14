@@ -1,7 +1,8 @@
 package zytdata
 
 import (
-	"golang.org/x/exp/slices"
+	"slices"
+
 	"golang.org/x/text/language"
 )
 

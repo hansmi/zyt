@@ -1,12 +1,12 @@
 package german
 
 import (
+	"slices"
 	"sort"
 	"strings"
 
 	"github.com/hansmi/zyt/internal/xtextlanguage"
 	"github.com/hansmi/zyt/pkg/zytdata"
-	"golang.org/x/exp/slices"
 	"golang.org/x/text/language"
 	"golang.org/x/text/unicode/norm"
 )

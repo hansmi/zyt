@@ -1,9 +1,9 @@
 package zyt
 
 import (
+	"slices"
 	"strings"
 
-	"golang.org/x/exp/slices"
 	"golang.org/x/text/unicode/norm"
 )
 

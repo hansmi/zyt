@@ -1,9 +1,9 @@
 package zyt
 
 import (
+	"slices"
 	"sync"
 
-	"golang.org/x/exp/slices"
 	"golang.org/x/text/language"
 )
 
